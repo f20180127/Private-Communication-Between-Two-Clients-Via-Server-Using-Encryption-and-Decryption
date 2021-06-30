@@ -1,0 +1,30 @@
+Server compilation:
+
+gcc -o server server.c -lpthread -lrt
+./server port_no
+
+Client1 compilation:
+
+gcc -o client client.c -lpthread -lrt -lssl -lcryptopem
+./client ip_address port_no privatekey1 publickey2
+
+Client2 compilation:
+
+gcc -o client client.c -lpthread -lrt -lssl -lcryptopem
+./client ip_address port_no privatekey2 publickey1
+
+Server sample compilation:
+
+gcc -o server server.c -lpthread -lrt
+./server 1234
+
+Client1 sample compilation:
+
+gcc -o client client.c -lpthread -lrt -lssl -lcrypto
+./client 127.0.0.1 1234 private1.pem public2.pem
+
+Client2 sample compilation:
+
+gcc -o client client.c -lpthread -lrt -lssl -lcrypto
+./client 127.0.0.1 1234 private2.pem public1.pem
+
