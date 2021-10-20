@@ -18,6 +18,7 @@ Server sample compilation:
 gcc -o server server.c -lpthread -lrt
 ./server 1234
 
+
 Client1 sample compilation:
 
 gcc -o client client.c -lpthread -lrt -lssl -lcrypto
